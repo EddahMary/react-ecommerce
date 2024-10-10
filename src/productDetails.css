@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.cardDetails{
+    border: 1px solid transparent !important;
+    margin-top: 20px;
+    width: 60%;
+}
+.card-img-top{
+    width: 400px !important;
+    /* height: 500px !important; */
+    margin: auto;
+
+}
+.card-title2{
+    font-size: 30px;
+    color: rgb(143, 49, 49) !important;
+
+}
