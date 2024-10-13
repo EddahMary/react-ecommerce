@@ -10,7 +10,7 @@ function Home() {
             src={photo}
             className="card-img"
             alt="background"
-            height="900px"
+            height="1500px"
             width="100px"
           />
           <div className="card-img-overlay d-flex flex-column justify-content-center">

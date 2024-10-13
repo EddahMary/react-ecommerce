@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import Logo from "../assets/Logo.png";
-import "./Navbar.css";
+import "./NavBar.css";
 import "font-awesome/css/font-awesome.min.css";
 
-function Navbar() {
+function NavBar() {
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-light bg-light py-3 shadow-sm">
@@ -30,7 +30,7 @@ function Navbar() {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <Link className="anchor" to={"/home"}>
+                <Link className="anchor" to={"/"}>
                   Home
                 </Link>
               </li>
@@ -69,4 +69,4 @@ function Navbar() {
   );
 }
 
-export default Navbar;
+export default NavBar;
