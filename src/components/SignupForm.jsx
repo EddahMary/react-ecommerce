@@ -1,5 +1,7 @@
 import { useState } from "react";
 import "./NavBar.css"
+import Logo from '../assets/Logo.png'
+import { Link } from "react-router-dom";
 
 function SignupForm() {
   const [signupDetails, setSignupDetails] = useState({
@@ -49,8 +51,12 @@ function SignupForm() {
 
   return (
     <div className="main-container">
-      <div className="form-container">
-        <h2>Create new account</h2>
+      <div className="form-content">
+        <img src={Logo} 
+        height= "100px"
+        width= "200px"
+        alt="Trendy Trinkets" />
+        <h2>Create your Trinkets account</h2>
         <br />
         {signupDetails.error && (
           <p style={{ color: "red" }}>{signupDetails.error}</p>
@@ -144,10 +150,24 @@ function SignupForm() {
               backgroundColor: "lightgreen",
               textAlign: "center",
               fontSize: "18px",
+              marginBottom: "10px",
             }}
           >
             Sign up
-          </button>
+          </button><br />
+          <Link to ={"/login"}>
+          <button type="submit"
+              style={{
+                width: "150px",
+                height: "60px",
+                lineHeight: "20px",
+                border: "none",
+                borderRadius: "30px",
+                backgroundColor: "lightgreen",
+                textAlign: "center",
+                fontSize: "18px",
+              }}>Go back to login page</button>
+          </Link>
         </form>
       </div>
     </div>

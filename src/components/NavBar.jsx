@@ -1,12 +1,18 @@
 import { Link } from "react-router-dom";
+import Logo from "../assets/Logo.png";
 import "./Navbar.css";
-import 'font-awesome/css/font-awesome.min.css';
+import "font-awesome/css/font-awesome.min.css";
 
 function Navbar() {
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-light bg-light py-3 shadow-sm">
         <div className="container">
+          <img src={Logo} 
+          className="logo-img"
+          height= "70px"
+          width= "400px"
+          alt="Trendy Trinkets" />
           <a className="navbar-brand fw-bold fs-4 color-blue" href="#">
             Trendy Trinkets
           </a>
@@ -24,30 +30,35 @@ function Navbar() {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <Link className="anchor" to={"/"}>Home</Link>
+                <Link className="anchor" to={"/"}>
+                  Home
+                </Link>
               </li>
               <li className="nav-item">
-                <Link className="anchor" to={"/about"}>About</Link>
+                <Link className="anchor" to={"/products"}>
+                  Products
+                </Link>
               </li>
               <li className="nav-item">
-                <Link className="anchor" to={"/products"}>Products</Link>
+                <Link className="anchor" to={"/about"}>
+                  About us
+                </Link>
               </li>
             </ul>
             <div className="buttons w-60 br-10">
               <Link to={"/login"}>
                 <button className="btn btn-primary">
-                <i className="fa fa-user"></i>&nbsp;
-                Log in</button>
+                  <i className="fa fa-user"></i>&nbsp; Log in
+                </button>
               </Link>
               <Link to={"/myorders"}>
                 <button className="btn btn-primary">
-                <i className="fa fa-shopping-bag"></i>&nbsp;
-                My orders</button>
+                  <i className="fa fa-shopping-bag"></i>&nbsp; My orders
+                </button>
               </Link>
-              <Link to={"/mycart"}>
+              <Link to={"/cart"}>
                 <button className="btn btn-primary">
-                <i className="fa fa-cart-plus"></i>&nbsp;
-                  My cart
+                  <i className="fa fa-cart-plus"></i>&nbsp; My cart
                 </button>
               </Link>
             </div>

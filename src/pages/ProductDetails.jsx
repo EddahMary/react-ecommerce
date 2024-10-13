@@ -1,12 +1,16 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import "../productDetails.css";
+import React from "react";
+import { Link, useParams } from "react-router-dom";
+import "./productDetails.css";
+import { CartContext } from "../Context/CartContext";
 
 function ProductDetail() {
   const { id } = useParams();
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+
+  const { cartValue, setCartValue } = React.useContext(CartContext);
 
   useEffect(() => {
     console.log("Product ID from URL:", id);
@@ -47,16 +51,24 @@ function ProductDetail() {
           <p className="card-text lead fw-bold text-success ">
             ${product.price}
           </p>
-          <a href="#" className="btn btn-primary fw-500 ff-poppins">
+          {/* <a href="#" className="btn btn-primary fw-500 ff-poppins">
                   Add to Cart
-                </a>
-          {/* <div>
-            <button onClick={handleAddToCart}>Add to Cart</button>
-          </div> */}
+                </a> */}
+          <div>
+            <Link to={"/cart"}>
+            <button
+              className="btn btn-outline-primary fw-500 ff-poppins"
+              onClick={() => setCartValue([...cartValue, product])}
+              >
+              Add to Cart
+            </button>
+            <p>cart value : {cartValue.length}</p>
+              </Link>
+          </div>
         </div>
       </div>
     </div>
   );
-};
+}
 
 export default ProductDetail;

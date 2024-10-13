@@ -1,0 +1,36 @@
+.cart-container {
+  width: 100vw;
+  height: 100vh;
+}
+.cart-container1 {
+  border: 1px solid transparent !important;
+  text-align: center;
+}
+.cart-container1 h1 {
+  font-family: cursive;
+  color: rgb(65, 23, 121);
+}
+.card-img {
+  width: 100px !important;
+  height: 100px !important;
+}
+.card1{
+  display: flex !important;
+  flex-direction: wrap !important;
+  margin: 20px;
+  width: 250px !important;
+  height: 310px !important;
+  padding: 10px;
+  border-radius: 10px;
+  border-color: rgb(62, 62, 148) !important;
+}
+.btn4{
+    border-radius: 15px !important;
+    background-color: rgb(185, 236, 194) !important;
+}
+.btn4:hover {
+    background-color: rgb(62, 170, 62) !important;
+}
+h5 {
+  font-size: 18px;
+}

@@ -13,7 +13,13 @@
     font-size:18px ;
     justify-content: space-evenly;
 }
-
+.logo-img{
+    margin-right: 40px;
+}
+.form-content img{
+    margin-top: 0;
+    margin-bottom: 10px;
+}
 .buttons{
     width: 500px;
     height: inherit;
@@ -36,33 +42,92 @@ button{
 
 .anchor{
     text-decoration: none !important;
-    color: rgb(44, 44, 44);
+    color: rgb(22, 21, 21);
 }
 
 .anchor:hover{
     color: blue;
 }
 .main-container{
+    background-color: white;
     width: 100vw;
     height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
 }
-.form-container{
+.img-container{
+    /* flex: 2; */
+    max-width: 50%;
+    margin: 50px 50px;
+}
+.img-container img{
+    width: 800px;
+    height: auto;
+    border-radius: 10px;
+}
+.form-content{
+    /* flex: 1; */
+    font-size: 18px;
     width: 30%;
-    height: 80%;
+    height: 100%; 
     display: flex;
     flex-direction: column;
-    background-color: rgb(252, 249, 249);
+    background-color: rgb(241, 236, 236);
     line-height: 10px;
     column-gap: 20px;
     justify-content: center;
     align-items: center;
     margin: auto;
-    margin-top: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     border: 1px solid #ccc;
     text-align: center;
-    border-radius: 10px;
+    border-radius: 10px; 
+}
+
+
+@media screen and (max-width:768px) {
+    .main-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .img-container, .form-content, .input-field{
+        max-width: 100%;
+        padding-left: 0;
+
+    }
 }
 .input-field{
     height: 35px;
     border-radius: 5px;
+}
+.card-title1{
+color: rgba(6, 49, 243, 0.952) !important;
+}
+.about-page{
+    display: flex;
+
+}
+.about-us2 img{
+    margin: 10px 20px;
+}
+.about-content{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-around;
+    column-gap: 10px;
+    margin-top: 10px;
+    font-size: 24px;
+}
+.about-content h2{
+    color: blueviolet;
+    font-family: cursive;
+}
+.about-content h3{
+    color: rgb(132, 9, 247);
+    font-family: cursive;
 }
