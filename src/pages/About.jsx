@@ -5,15 +5,13 @@ function About() {
   return (
     <>
       <div className="about-page">
-        <div className="about-us about-us2 bg-warm text-black border-0">
+        {/* <div className="about-us about-us2 bg-warm text-black border-0"> */}
           <img
             src={Shop}
             className="abt-img"
-            width="900px"
-            height="900px"
             alt="background"
           />
-        </div>
+        
         <div className="about-content">
           <div>
             <h2>Welcome to Trendy Trinkets</h2>

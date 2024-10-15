@@ -44,7 +44,7 @@ function FetchProducts() {
 
     return (
       <>
-        <div className="buttons d-flex justify-content-center mb-5 pb-0">
+        <div className="buttons d-flex justify-content-center mb-5">
           <button
             className="btn btn-outline-success me-2"
             onClick={() => setFilter(data)}
@@ -80,24 +80,21 @@ function FetchProducts() {
             Electronics section
           </button>
         </div>
-        <div className="row">
+        <div className="cards-container">
           {filter.map((product) => {
             return (
               <>
-                <div className="col-md-4" key={product.id}>
-                  <div className="card cardDetails2 shadow h-60 text-center p-0 mt-4">
+                  <div className="card shadow" key={product.id}>
                     <img
                       src={product.image}
-                      className="card-img-top"
+                      className="card-img"
                       alt={product.title}
-                      height="300px"
-                      width="250px"
                     />
                     <div className="card-body">
-                      <h5 className="card-title mb-0">
+                      <h5 className="card-title fw-bold mb-0">
                         {product.title.substring(0, 15)}...
                       </h5>
-                      <p className="card-text lead fw-bold text-success ">
+                      <p className="card-text text-center fw-bold text-success ">
                         ${product.price}
                       </p>
                       <Link
@@ -110,11 +107,9 @@ function FetchProducts() {
                         >
                           View details
                         </a>
-                        {/* <p>cart value : {cartValue}</p> */}
                       </Link>
                     </div>
                   </div>
-                </div>
               </>
             );
           })}
@@ -123,20 +118,16 @@ function FetchProducts() {
     );
   };
   return (
-    <div>
       <div className="container my-8 py-4 bg-warm">
-        <div className="row">
           <div className="col-12 mb-10">
             <h1 className="display-6 fw-bolder text-center text-success">
               Explore our December themes
             </h1>
           </div>
-        </div>
         <div className="row justify-content-center">
           {loading ? <Loading /> : <ShowProducts />}
         </div>
       </div>
-    </div>
   );
 }
 

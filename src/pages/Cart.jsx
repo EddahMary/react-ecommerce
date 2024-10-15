@@ -4,8 +4,11 @@ import { Link } from "react-router-dom";
 import "./Cart.css"
 
 function Cart() {
-  const { cartValue } = React.useContext(CartContext);
+  const { cartValue, removeFromCart } = React.useContext(CartContext);
 
+  const handleRemoveFromCart = (value) => {
+    removeFromCart(value);
+  }
   return (
     <div className="cart-container cart-container1 text-center p-0 mt-2">
       <h1> My cart</h1>
@@ -24,20 +27,18 @@ function Cart() {
         cartValue.map((product, index) => (
           
           <div className="col-md-4 card card1" key={index}>
-              <div className="card-content">
+              <div className="card-content ">
                 <h5>{product.title}</h5>
                 <img
                   src={product.image}
                   className="card-img"
-                  height="200px"
-                  width="300px"
                   alt={product.title}
-                />
+                  />
                 <div>
                   <p className="card-text lead fw-bold text-success ">
                     ${product.price}
                   </p>
-                  <button className="btn btn4 fw-700 ff-poppins">
+                  <button className="btn btn4 fw-700 ff-poppins" onClick={() => handleRemoveFromCart(product.id)}>
                     Remove
                   </button>
                 </div>

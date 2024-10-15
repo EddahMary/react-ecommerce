@@ -6,7 +6,7 @@ import "font-awesome/css/font-awesome.min.css";
 function NavBar() {
   return (
     <div>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light py-3 shadow-sm">
+      <nav className="navbar navbar-bar navbar-expand-lg navbar-light bg-light py-3 shadow-sm">
         <div className="container">
           <img src={Logo} 
           className="logo-img"
@@ -29,11 +29,11 @@ function NavBar() {
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
-              <li className="nav-item">
-                <Link className="anchor" to={"/"}>
-                  Home
-                </Link>
-              </li>
+            <li className="nav-item">
+              <Link className="anchor" to={"/"}>
+              Home
+              </Link>
+            </li>
               <li className="nav-item">
                 <Link className="anchor" to={"/products"}>
                   Products

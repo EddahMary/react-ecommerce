@@ -36,7 +36,7 @@ function SignupForm() {
       return;
     }
     // !-ternary operator to check if expression is falsei.e if password entered isn't
-    // same as password enetered for confirmation an error is thrown
+    // same as password entered for confirmation if not an error is thrown
     if (signupDetails.password !== signupDetails.confirmPassword) {
       setSignupDetails.Error("Passwords do not match");
       return;
